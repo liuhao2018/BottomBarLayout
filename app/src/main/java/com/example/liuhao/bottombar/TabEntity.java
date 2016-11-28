@@ -6,7 +6,8 @@ package com.example.liuhao.bottombar;
 
 public class TabEntity {
     private String text;
-    private int iconId;
+    private int normalIconId;
+    private int selectIconId;
 
     public String getText() {
         return text;
@@ -16,11 +17,19 @@ public class TabEntity {
         this.text = text;
     }
 
-    public int getIconId() {
-        return iconId;
+    public int getNormalIconId() {
+        return normalIconId;
     }
 
-    public void setIconId(int iconId) {
-        this.iconId = iconId;
+    public void setNormalIconId(int normalIconId) {
+        this.normalIconId = normalIconId;
+    }
+
+    public int getSelectIconId() {
+        return selectIconId;
+    }
+
+    public void setSelectIconId(int selectIconId) {
+        this.selectIconId = selectIconId;
     }
 }
