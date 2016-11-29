@@ -72,6 +72,7 @@ public class BottomBarLayout extends LinearLayout implements View.OnClickListene
             ImageView icon = (ImageView) itemView.findViewById(R.id.iv_icon);
             TabEntity itemTab = tabList.get(i);
             text.setText(itemTab.getText());
+            text.setTextColor(normalTextColor);
             icon.setImageResource(itemTab.getNormalIconId());
             mLinearLayout.addView(itemView);
             if(i==0){

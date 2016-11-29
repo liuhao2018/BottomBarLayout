@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private int[] normalIcon = {R.mipmap.home,R.mipmap.play,R.mipmap.buy,R.mipmap.mine};
     private int[] selectIcon = {R.mipmap.home1,R.mipmap.play1,R.mipmap.buy1,R.mipmap.mine1};
 
-    private int normalTextColor = Color.parseColor("#333333");
+    private int normalTextColor = Color.parseColor("#999999");
     private int selectTextColor = Color.parseColor("#fa6e51");
 
     @Override

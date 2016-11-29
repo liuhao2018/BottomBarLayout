@@ -10,6 +10,7 @@
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:background="#FFFFFF"
         android:layout_alignParentBottom="true"/>
 
 

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 /**
@@ -12,7 +13,7 @@ import android.widget.LinearLayout;
 
 public class TabItemLayout extends LinearLayout {
 
-
+    
 
     public TabItemLayout(Context context) {
         super(context);
@@ -25,12 +26,16 @@ public class TabItemLayout extends LinearLayout {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        int heightSize = MeasureSpec.getSize(heightMeasureSpec);
+        setMeasuredDimension(getScreenWidth/4,heightSize);
+    }
+
+
+    private int getScreenWidth(){
         WindowManager wm = (WindowManager) getContext().getSystemService(
                 Context.WINDOW_SERVICE);
         DisplayMetrics dm = new DisplayMetrics();
         wm.getDefaultDisplay().getMetrics(dm);
-        int widthSize = dm.widthPixels/4;
-        int heightSize = MeasureSpec.getSize(heightMeasureSpec);
-        setMeasuredDimension(widthSize,heightSize);
+        return dm.widthPixels;
     }
 }
