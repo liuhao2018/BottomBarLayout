@@ -1,5 +1,7 @@
 # BottomBarLayout
 
+![](https://github.com/liuhaoer/BottomBarLayout/blob/master/img.png)
+
 ### 使用：
 XML:
 
