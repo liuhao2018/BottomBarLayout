@@ -27,7 +27,7 @@ public class TabItemLayout extends LinearLayout {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         int heightSize = MeasureSpec.getSize(heightMeasureSpec);
-        setMeasuredDimension(getScreenWidth/4,heightSize);
+        setMeasuredDimension(getScreenWidth()/4,heightSize);
     }
 
 

@@ -70,10 +70,26 @@ public class BottomBarLayout extends LinearLayout implements View.OnClickListene
             itemView.setOnClickListener(this);
             TextView text = (TextView) itemView.findViewById(R.id.tv_title);
             ImageView icon = (ImageView) itemView.findViewById(R.id.iv_icon);
+            View redPoint = itemView.findViewById(R.id.red_point);
+            TextView number = (TextView) itemView.findViewById(R.id.tv_count);
             TabEntity itemTab = tabList.get(i);
             text.setText(itemTab.getText());
             text.setTextColor(normalTextColor);
             icon.setImageResource(itemTab.getNormalIconId());
+            if(itemTab.isShowPoint()){
+                redPoint.setVisibility(View.VISIBLE);
+            }else{
+                redPoint.setVisibility(View.GONE);
+            }
+            if(itemTab.getNewsCount() == 0){
+                number.setVisibility(View.GONE);
+            }else if(itemTab.getNewsCount()>99){
+                number.setVisibility(View.VISIBLE);
+                number.setText("99+");
+            }else {
+                number.setVisibility(View.VISIBLE);
+                number.setText(String.format("%d",itemTab.getNewsCount()));
+            }
             mLinearLayout.addView(itemView);
             if(i==0){
                 showTab(0,itemView);

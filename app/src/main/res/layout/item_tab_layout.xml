@@ -5,11 +5,35 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <ImageView
-        android:id="@+id/iv_icon"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:src="@mipmap/home"/>
+    <FrameLayout
+        android:layout_width="28dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/home"/>
+
+        <View
+            android:id="@+id/red_point"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:background="@drawable/circle_point"
+            android:layout_gravity="right|top"/>
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="right|top"
+            android:textSize="8sp"
+            android:gravity="center"
+            android:background="@drawable/circle_point"
+            android:textColor="#FFFFFF"/>
+
+    </FrameLayout>
 
     <TextView
         android:id="@+id/tv_title"

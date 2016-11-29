@@ -8,6 +8,24 @@ public class TabEntity {
     private String text;
     private int normalIconId;
     private int selectIconId;
+    private boolean isShowPoint;
+    private int newsCount;
+
+    public int getNewsCount() {
+        return newsCount;
+    }
+
+    public void setNewsCount(int newsCount) {
+        this.newsCount = newsCount;
+    }
+
+    public boolean isShowPoint() {
+        return isShowPoint;
+    }
+
+    public void setShowPoint(boolean showPoint) {
+        isShowPoint = showPoint;
+    }
 
     public String getText() {
         return text;

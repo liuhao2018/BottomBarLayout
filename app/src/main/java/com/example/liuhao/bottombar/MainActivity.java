@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private BottomBarLayout bottomBarLayout;
     private List<TabEntity> tabEntityList;
-    private String[] tabText = {"tab0","tab1","tab2","tab3"};
+    private String[] tabText = {"首页","玩啥","买票","我的"};
 
     private int[] normalIcon = {R.mipmap.home,R.mipmap.play,R.mipmap.buy,R.mipmap.mine};
     private int[] selectIcon = {R.mipmap.home1,R.mipmap.play1,R.mipmap.buy1,R.mipmap.mine1};
@@ -31,6 +31,16 @@ public class MainActivity extends AppCompatActivity {
             item.setText(tabText[i]);
             item.setNormalIconId(normalIcon[i]);
             item.setSelectIconId(selectIcon[i]);
+            if(i==2 || i==3){
+                item.setShowPoint(true);
+            }else{
+                item.setShowPoint(false);
+            }
+            if(i==0 || i==1){
+                item.setNewsCount(i+1);
+            }else {
+                item.setNewsCount(0);
+            }
             tabEntityList.add(item);
         }
 
